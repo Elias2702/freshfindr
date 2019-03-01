@@ -11,4 +11,6 @@ import ReactDOM from "react-dom";
 
 import Freshfindr from "./components/freshfindr";
 
+import "./scss/app.scss";
+
 ReactDOM.render(<Freshfindr />, document.querySelector("#app"));
