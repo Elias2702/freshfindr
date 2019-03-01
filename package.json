@@ -2,7 +2,7 @@
   "name": "@becode/freshfindr",
   "version": "0.0.1",
   "description": "A simple react/node app, locating the ATMs nearby.",
-  "author": "Elias Djenidi, Julie Vanderbyse, Antoine Dannemark, KEvin Aldenhoff",
+  "author": "Elias Djenidi, Julie Vanderbyse, Antoine Dannemark, Kevin Aldenhoff",
   "license": "MIT",
   "private": true,
   "scripts": {
