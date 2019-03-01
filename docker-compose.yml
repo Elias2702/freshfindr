@@ -14,18 +14,7 @@
         - "12345"
         - "9229"
       ports:
-        - "80:12345"
+        - "8082:12345"
         - "9229"
       command: "nodemon --inspect=0.0.0.0:9229 --watch bin/server bin/server/index.js"
-    mongo:
-      image: "mongo"
-      restart: "always"
-      ports:
-        - "27017:27017"
-      volumes:
-        - "mongo_db:/data/db"
-      environment:
-        MONGO_INITDB_ROOT_USERNAME: "dev"
-        MONGO_INITDB_ROOT_PASSWORD: "dev"
-  volumes:
-    mongo_db:
+   
