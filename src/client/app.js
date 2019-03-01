@@ -9,8 +9,8 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 
-import Freshfindr from "./components/freshfindr";
+import Login from "./components/login";
 
 import "./scss/app.scss";
 
-ReactDOM.render(<Freshfindr />, document.querySelector("#app"));
+ReactDOM.render(<Login />, document.querySelector("#app"));

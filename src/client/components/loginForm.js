@@ -1,16 +1,14 @@
 import * as React from "react";
 
 export default class LoginFrom extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
     }
 
-    render(){
-        return(
-            <div>
-                <form
-                    onSubmit={this.props.handleSubmit}
-                    className="loginForm">
+    render() {
+        return (
+            <div className="loginFormContainer">
+                <form onSubmit={this.props.handleSubmit} className="loginForm">
                     <input
                         type="text"
                         onChange={this.props.handleChange}
@@ -33,5 +31,4 @@ export default class LoginFrom extends React.Component {
             </div>
         );
     }
-
 }
