@@ -1,8 +1,8 @@
 {
-  "name": "@becode/trouvkach",
+  "name": "@becode/freshfindr",
   "version": "0.0.1",
   "description": "A simple react/node app, locating the ATMs nearby.",
-  "author": "leny <leny@becode.org>",
+  "author": "Elias Djenidi, Julie Vanderbyse, Antoine Dannemark, KEvin Aldenhoff",
   "license": "MIT",
   "private": true,
   "scripts": {
