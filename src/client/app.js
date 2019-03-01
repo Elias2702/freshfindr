@@ -9,6 +9,6 @@
 import * as React from "react";
 import ReactDOM from "react-dom";
 
-import HelloWorld from "./components/hello";
+import Freshfindr from "./components/freshfindr";
 
-ReactDOM.render(<HelloWorld />, document.querySelector("#app"));
+ReactDOM.render(<Freshfindr />, document.querySelector("#app"));
