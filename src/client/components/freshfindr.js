@@ -8,13 +8,13 @@
 
 import * as React from "react";
 
-export default class HelloWorld extends React.Component {
+export default class Freshfindr extends React.Component {
     render() {
         return (
             <div>
-                <h1>{"Hello, world!"}</h1>
+                <h1>{"Freshfindr Map"}</h1>
                 <hr />
-                <small>{"becode/bookshelf"}</small>
+                <p>{"map here"}</p>
             </div>
         );
     }
