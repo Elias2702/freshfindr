@@ -2,33 +2,35 @@ import * as React from "react";
 import LoginForm from "./loginForm";
 
 export default class Login extends React.Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state({
-            email:"",
-            password:"",
-        });
+        this.state = {
+            email: "",
+            password: "",
+        };
 
         this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        /* this.handleSubmit = this.handleSubmit.bind(this); */
     }
 
-    handleChange(data){
+    handleChange(data) {
         let input = data.target;
+
         this.setState({
-            [input.name]:input.value,
-        })
+            [input.name]: input.value,
+        });
     }
 
-    handleSubmit(data){
-        
-    }
-    
+    /* handleSubmit(data) {} */
+
     render() {
         return (
             <div className="loginContainer">
-                <h1>{FreshFindr}</h1>
-                <LoginForm handleChange={this.handleChange} handleSubmit={this.handleSubmit}/>
+                <h1>{"FreshFindr"}</h1>
+                <LoginForm
+                    handleChange={this.handleChange}
+                    /* handleSubmit={this.handleSubmit} */
+                />
             </div>
         );
     }

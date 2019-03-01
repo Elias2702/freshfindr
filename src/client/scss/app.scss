@@ -5,3 +5,24 @@ html, body {
     height: 100%;
     margin: 0 auto;
 }
+
+.loginContainer{
+    margin: 0 auto;
+    width: 350px;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm input {
+    border: 4px solid rgba(223, 132, 25, 0.56);
+    border-radius: 40px;
+    margin-top: 25px;
+}
+
+.loginButton{
+    background: rgba(223, 132, 25, 0.79);
+    border-radius: 40px;
+}
