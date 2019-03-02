@@ -23,6 +23,7 @@ export default class SearchBar extends React.Component {
             ),
             ButtonClicked: "buttonIsClicked",
         });
+        this.props.displaySearchbar();
     }
 
     render() {

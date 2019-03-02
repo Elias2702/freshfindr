@@ -7,9 +7,11 @@ export default class Freshfindr extends React.Component {
         super(props);
         this.state = {
             displayList: false,
+            displaySearchbar: false,
         };
         this.displayTheList = this.displayTheList.bind(this);
         this.displaySettings = this.displaySettings.bind(this);
+        this.displaySearchbar = this.displaySearchbar.bind(this);
     }
 
     displayTheList = () => {
@@ -25,14 +27,29 @@ export default class Freshfindr extends React.Component {
         });
     };
 
+    displaySearchbar = () => {
+        this.setState({
+            displaySearchbar: true,
+        });
+    };
+
     render() {
+        let isBlurred = "";
+
+        if (this.state.displaySearchbar) {
+            isBlurred = "blurred";
+        } else {
+            isBlurred = "";
+        }
+
         return (
             <div className="container">
                 <MapContainer
                     displayTheList={this.displayTheList}
                     displaySettings={this.displaySettings}
+                    blurred={isBlurred}
                 />
-                <SearchBar />
+                <SearchBar displaySearchbar={this.displaySearchbar} />
             </div>
         );
     }
