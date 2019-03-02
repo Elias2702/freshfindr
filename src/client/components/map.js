@@ -67,15 +67,17 @@ export class MapContainer extends React.Component {
 
     render() {
         /* const coords = {lat: -21.805149, lng: -49.0921657}; */
-
+        console.log(this.props.blurred)
+        
         return (
             <>
                 {/* <span class="dot"></span> */}
                 <MapButtons
                     onListClick={this.props.displayTheList}
                     onSettingsClick={this.props.displaySettings}
+                    isBlurred={this.props.blurred}
                 />
-                <div className="MapContainer">
+                <div className={`MapContainer ${this.props.blurred}`}>
                     <Map
                         google={this.props.google}
                         zoom={15}
