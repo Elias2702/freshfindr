@@ -159,14 +159,18 @@ html, body {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 18px;
+    font-size: 22px;
     margin-left: 10px;
     margin-right: 10px;
     padding-top: 10px;
 }
 
 .stars {
-    margin-right: 200px;
+    display: flex;
+    justify-content:space-between;
+    width: 70px;
+    align-items: center;
+    margin-right: 180px;
 }
 
 .hr {
