@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 .container {
@@ -93,4 +94,35 @@ html, body {
     font-size: 50px;
     color:white;
     grid-row: 2;
+}
+
+.searchBar {
+    z-index: 1;
+    position: absolute;
+    margin-top: 110%;
+    margin-left: 5%;
+    width: 90%;
+}
+
+.searchButton {
+    padding: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color:rgba(223, 132, 25, 0.67);
+}
+
+.searchButton.buttonIsClicked {
+    padding: 3rem;
+    background-color: rgba(223, 132, 25, 0.67);
+}
+
+.searchBar .textarea {
+    border: none;
+    border-radius: 2rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    width: 70%;
+    height: 3rem;
+    background-color: rgba(37, 26, 68, 0.84);
+    font-size: 2rem;
 }
