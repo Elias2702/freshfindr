@@ -57,6 +57,7 @@ export default class StoreInfo extends React.Component {
                     // overlayClassName="Overlay"
                     style={customStyles}>
                     <button onClick={this.props.closeModal}>{closeBtn}</button>
+                    <hr className="hr" />
                 </Modal>
             </>
         );
