@@ -6,6 +6,7 @@ import {
     GoogleApiWrapper,
     Circle,
 } from "google-maps-react";
+import MapButtons from "./mapButtons";
 
 const style = {
     // style of the map
@@ -37,12 +38,15 @@ const success = pos => {
 navigator.geolocation.getCurrentPosition(success, error); // ask to the user if he allow the geolocalisation
 
 export class MapContainer extends React.Component {
-    state = {
-        // state used with npm package for google maps : https://www.npmjs.com/package/google-maps-react
-        showingInfoWindow: false,
-        activeMarker: {},
-        selectedPlace: {},
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            // state used with npm package for google maps : https://www.npmjs.com/package/google-maps-react
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {},
+        };
+    }
 
     onMarkerClick = (props, marker) => {
         // to show box information when click on position
@@ -67,7 +71,10 @@ export class MapContainer extends React.Component {
         return (
             <>
                 {/* <span class="dot"></span> */}
-
+                <MapButtons
+                    onListClick={this.props.displayTheList}
+                    onSettingsClick={this.props.displaySettings}
+                />
                 <div className="MapContainer">
                     <Map
                         google={this.props.google}
