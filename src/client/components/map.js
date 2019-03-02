@@ -127,16 +127,14 @@ export class MapContainer extends React.Component {
                             name={"Carrefour Express"}
                             position={{lat: 50.876928, lng: 4.700598}}
                             onClick={this.openModal}
-
-                       />
+                        />
 
                         <Marker
                             title={"Carrefour Express"}
                             name={"Carrefour Express"}
                             position={{lat: 50.876249, lng: 4.711735}}
                             onClick={this.openModal}
-
-                       />
+                        />
 
                         <Marker
                             title={"Carrefour Express"}
@@ -150,7 +148,6 @@ export class MapContainer extends React.Component {
                             name={"Carrefour Express"}
                             position={{lat: 50.871026, lng: 4.691831}}
                             onClick={this.openModal}
-
                         />
 
                         <InfoWindow
@@ -161,8 +158,6 @@ export class MapContainer extends React.Component {
                                 <h1>{this.state.selectedPlace.name}</h1>
                             </div>
                         </InfoWindow>
-
-            
                     </Map>
                 </div>
             </>
