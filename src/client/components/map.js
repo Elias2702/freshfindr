@@ -117,5 +117,6 @@ export class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
+    /* eslint new-cap: [2, {capIsNewExceptions: ["M"]}]*/
     apiKey: "AIzaSyDalvpxv-7crRgGa3MNhZiWIClcM1urB2o",
 })(MapContainer); // eslint-disable-line new-cap
