@@ -61,12 +61,6 @@ export class MapContainer extends React.Component {
     //     this.subtitle.style.color = "#f00";
     // }
 
-<<<<<<< HEAD
-    render() {
-        /* const coords = {lat: -21.805149, lng: -49.0921657}; */
-        console.log(this.props.blurred)
-        
-=======
     closeModal() {
         this.setState({modalIsOpen: false});
     }
@@ -89,7 +83,6 @@ export class MapContainer extends React.Component {
     // };
 
     render() {
->>>>>>> 296cea86eb97bc29d27d5d0b1cf65151156d69fe
         return (
             <>
                 {/* <span class="dot"></span> */}
