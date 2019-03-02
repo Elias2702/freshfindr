@@ -70,17 +70,22 @@ export default class StoreEval extends React.Component {
   </select> 
   </span> 
   <br/>
-  <span>Texture</span> 
+  <span>{"Texture"} {star}{star}{star}</span> 
   <br/>
-  <span>Taste</span> 
+  <span>{"Taste"} {star}{star}</span> 
   <br/>  
-  <span>Freshness</span> 
+  <span>{"Freshness"} {star}</span> 
   <br/>
-  <span>Smell</span> 
+  <span>{"Smell"} {star}{star}{star}{star}</span> 
   <br/>
   <textarea placeholder="Type your comment.."></textarea>
   </div>
   
+  <button
+                            className="addReview_button"
+                            onClick={this.props.closeModal}>
+                            {"+"}
+                        </button>
                 </Modal>
             </>
         );
