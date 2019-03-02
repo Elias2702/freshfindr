@@ -90,6 +90,7 @@ export class MapContainer extends React.Component {
                 {/* <span class="dot"></span> */}
                 <MapButtons
                     onListClick={this.props.displayTheList}
+                    onAnalyticsClick={this.props.displayAnalytics}
                     onSettingsClick={this.props.displaySettings}
                     isBlurred={this.props.blurred}
                 />
