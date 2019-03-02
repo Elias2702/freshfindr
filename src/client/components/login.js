@@ -15,13 +15,13 @@ export default class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-    // handleChange(data) {
-    //     let input = data.target;
+    handleChange(data) {
+        let input = data.target;
 
-    //     this.setState({
-    //         [input.name]: input.value,
-    //     });
-    // }
+        this.setState({
+            [input.name]: input.value,
+        });
+    }
 
     handleSubmit() {
         this.props.history.push("/home");
