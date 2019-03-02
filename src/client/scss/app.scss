@@ -15,7 +15,11 @@ html, body {
 
 .MapContainer {
     z-index: -1;
-    
+}
+
+.MapContainer.blurred {
+    filter: blur(0.1px);
+    // opacity: 0.5;
 }
 
 .loginContainer{

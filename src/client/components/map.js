@@ -91,8 +91,9 @@ export class MapContainer extends React.Component {
                 <MapButtons
                     onListClick={this.props.displayTheList}
                     onSettingsClick={this.props.displaySettings}
+                    isBlurred={this.props.blurred}
                 />
-                <div className="MapContainer">
+                <div className={`MapContainer ${this.props.blurred}`}>
                     <Map
                         google={this.props.google}
                         zoom={15}
