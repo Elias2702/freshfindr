@@ -8,6 +8,7 @@ export default class LoginFrom extends React.Component {
     render() {
         return (
             <div className="loginFormContainer">
+                <h1>{"FreshFindr"}</h1>
                 <form onSubmit={this.props.handleSubmit} className="loginForm">
                     <input
                         type="text"
