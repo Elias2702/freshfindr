@@ -2,7 +2,7 @@
   "name": "@becode/freshfindr",
   "version": "0.0.1",
   "description": "A simple react/node app, locating the ATMs nearby.",
-  "author": "Elias Djenidi, Julie Vanderbyse, Antoine Dannemark, KEvin Aldenhoff",
+  "author": "Elias Djenidi, Julie Vanderbyse, Antoine Dannemark, Kevin Aldenhoff",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -10,7 +10,7 @@
     "build:server": "npx babel src/server -s --out-dir bin/server",
     "work:server": "npx babel src/server -s --watch --verbose --out-dir bin/server",
     "build:client": "npx webpack --progress --profile --colors",
-    "work:client": "npx webpack --env=dev --progress",
+    "work:client": "npx webpack-dev-server --env=dev --hot --progress",
     "build": "npm run build:server && npm run build:client"
   },
   "lint-staged": {
@@ -40,14 +40,17 @@
     "prettier": "^1.14.3",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.20.2",
-    "webpack-cli": "^3.1.2"
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.2.1"
   },
   "dependencies": {
     "css-loader": "^2.1.0",
     "express": "^4.16.4",
+    "google-maps-react": "^2.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1"
   },
