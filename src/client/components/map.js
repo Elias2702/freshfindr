@@ -3,9 +3,11 @@ import {Map, InfoWindow, Marker, GoogleApiWrapper} from "google-maps-react";
 
 const style = {
     // style of the map
-    width: "75%",
-    height: "75%",
+    width: "100%",
+    height: "100%",
+    maxHeight: "100%",
     margin: "0 auto",
+    position: "absolute",
 };
 
 let center = {
@@ -55,23 +57,25 @@ export class MapContainer extends React.Component {
                     name="q"
                     aria-label="Search your product"
                 />
-                <Map
-                    google={this.props.google}
-                    zoom={14}
-                    initialCenter={center}
-                    style={style}>
-                    <Marker
-                        onClick={this.onMarkerClick}
-                        name={"Freshfindr User"}
-                    />
-                    <InfoWindow
-                        marker={this.state.activeMarker}
-                        visible={this.state.showingInfoWindow}>
-                        <div>
-                            <h1>{this.state.selectedPlace.name}</h1>
-                        </div>
-                    </InfoWindow>
-                </Map>
+                <div className="MapContainer">
+                    <Map
+                        google={this.props.google}
+                        zoom={15}
+                        initialCenter={center}
+                        style={style}>
+                        <Marker
+                            onClick={this.onMarkerClick}
+                            name={"Freshfindr User"}
+                        />
+                        <InfoWindow
+                            marker={this.state.activeMarker}
+                            visible={this.state.showingInfoWindow}>
+                            <div>
+                                <h1>{this.state.selectedPlace.name}</h1>
+                            </div>
+                        </InfoWindow>
+                    </Map>
+                </div>
             </>
         );
     }
