@@ -18,15 +18,12 @@ html, body {
 
 .ReactModalPortal{
     z-index: 1;
-    width: 500px;
-    height: 500px;
-    background: #000;
+    width: 300px;
+    height: 350px;
+    background-color: rgba(36, 24, 68, 50);
     position: absolute;
     opacity: 0.5;
-}
-
-input[type=search] {
-
+    border-radius: 1rem;
 }
 
 .loginContainer{

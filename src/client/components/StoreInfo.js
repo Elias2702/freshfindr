@@ -32,7 +32,6 @@ export default class StoreInfo extends React.Component {
     }
 
     afterOpenModal() {
-        // references are now sync'd and can be accessed.
         this.subtitle.style.color = "#f00";
     }
 
@@ -42,12 +41,14 @@ export default class StoreInfo extends React.Component {
 
     render() {
         return (
-            <Modal
-                isOpen={true}
-                className="modal"
-                overlayClassName="Overlay"
-                style={customStyles}
-            />
+            <>
+                <Modal
+                    isOpen={true}
+                    className="modal"
+                    overlayClassName="Overlay"
+                    style={customStyles}
+                />
+            </>
         );
     }
 }
