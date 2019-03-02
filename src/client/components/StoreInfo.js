@@ -1,6 +1,7 @@
 import React from "react";
 import Modal from "react-modal";
 import cross from "../ressources/icones/X.png";
+import pathIcon from "../ressources/icones/path.png";
 
 const customStyles = {
     content: {
@@ -9,11 +10,12 @@ const customStyles = {
         right: "25%",
         bottom: "auto",
         width: "30%",
-        height: "40%",
+        height: "auto",
         position: "relative",
         backgroundColor: "rgba(37, 26, 68, 0.84)",
         borderRadius: "20px",
         outline: "none",
+        paddingBottom: "2rem;",
     },
 };
 
@@ -58,9 +60,22 @@ export default class StoreInfo extends React.Component {
                             <img src={cross} />
                         </button>
                     </span>
-
                     <hr className="hr" />
-                    <button onClick={this.props.changeModal} />
+                    <div className="addReview">
+                        <span>
+                            <h1 className="Topreview">{"Top review"}</h1>
+                            <p>{"Open"}</p>
+                            <img src={pathIcon} />
+                        </span>
+                        <form>
+                            <textarea className="review_input" />
+                        </form>
+                        <button
+                            className="addReview_button"
+                            onClick={this.props.changeModal}>
+                            {"+"}
+                        </button>
+                    </div>
                 </Modal>
             </>
         );
