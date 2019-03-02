@@ -1,5 +1,6 @@
 import * as React from "react";
 import MapContainer from "./map";
+import SearchBar from "./searchbar";
 
 export default class Freshfindr extends React.Component {
     constructor(props) {
@@ -31,6 +32,7 @@ export default class Freshfindr extends React.Component {
                     displayTheList={this.displayTheList}
                     displaySettings={this.displaySettings}
                 />
+                <SearchBar />
             </div>
         );
     }
