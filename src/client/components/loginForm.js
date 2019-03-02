@@ -1,4 +1,5 @@
 import * as React from "react";
+import tangerine from "../ressources/tangerine_1f34a.png";
 
 export default class LoginFrom extends React.Component {
     constructor(props) {
@@ -8,7 +9,8 @@ export default class LoginFrom extends React.Component {
     render() {
         return (
             <div className="loginFormContainer">
-                <form onClick={this.props.handleSubmit} className="loginForm">
+                <img src={tangerine} />
+                <form onSubmit={this.props.handleSubmit} className="loginForm">
                     <input
                         type="text"
                         onChange={this.props.handleChange}
