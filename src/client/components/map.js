@@ -7,6 +7,7 @@ import {
     // Circle,
 } from "google-maps-react";
 import StoreInfo from "./StoreInfo";
+import MapButtons from "./mapButtons";
 
 const style = {
     // style of the map
@@ -38,12 +39,15 @@ const success = pos => {
 navigator.geolocation.getCurrentPosition(success, error); // ask to the user if he allow the geolocalisation
 
 export class MapContainer extends React.Component {
-    state = {
-        // state used with npm package for google maps : https://www.npmjs.com/package/google-maps-react
-        showingInfoWindow: false,
-        activeMarker: {},
-        selectedPlace: {},
-    };
+    constructor(props) {
+        super(props);
+        this.state = {
+            // state used with npm package for google maps : https://www.npmjs.com/package/google-maps-react
+            showingInfoWindow: false,
+            activeMarker: {},
+            selectedPlace: {},
+        };
+    }
 
     onMarkerClick = (props, marker) => {
         // to show box information when click on position
@@ -54,10 +58,24 @@ export class MapContainer extends React.Component {
         });
     };
 
+    closeInfoWindow = () => {
+        this.setState({
+            selectedPlace: {},
+            activeMarker: null,
+            showingInfoWindow: false,
+        });
+    };
+
     render() {
+        /* const coords = {lat: -21.805149, lng: -49.0921657}; */
+
         return (
             <>
                 {/* <span class="dot"></span> */}
+                <MapButtons
+                    onListClick={this.props.displayTheList}
+                    onSettingsClick={this.props.displaySettings}
+                />
                 <div className="MapContainer">
                     <StoreInfo />
                     <Map
@@ -84,7 +102,8 @@ export class MapContainer extends React.Component {
                         />
                         <InfoWindow
                             marker={this.state.activeMarker}
-                            visible={this.state.showingInfoWindow}>
+                            visible={this.state.showingInfoWindow}
+                            onClose={this.closeInfoWindow}>
                             <div>
                                 <h1>{this.state.selectedPlace.name}</h1>
                             </div>
