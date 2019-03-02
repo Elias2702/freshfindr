@@ -1,4 +1,5 @@
 import * as React from "react";
+// import {Redirect} from "react-router-dom";
 import LoginForm from "./loginForm";
 
 export default class Login extends React.Component {
@@ -7,6 +8,7 @@ export default class Login extends React.Component {
         this.state = {
             email: "",
             password: "",
+            redirect: true,
         };
 
         this.handleChange = this.handleChange.bind(this);
