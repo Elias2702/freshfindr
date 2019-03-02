@@ -46,25 +46,41 @@ export class MapContainer extends React.Component {
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
+            modalIsOpen: false,
         };
+        this.openModal = this.openModal.bind(this);
+        // this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
-    onMarkerClick = (props, marker) => {
-        // to show box information when click on position
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true,
-        });
-    };
+    openModal() {
+        this.setState({modalIsOpen: true});
+    }
 
-    closeInfoWindow = () => {
-        this.setState({
-            selectedPlace: {},
-            activeMarker: null,
-            showingInfoWindow: false,
-        });
-    };
+    // afterOpenModal() {
+    //     this.subtitle.style.color = "#f00";
+    // }
+
+    closeModal() {
+        this.setState({modalIsOpen: false});
+    }
+
+    // onMarkerClick = (props, marker) => {
+    //     // to show box information when click on position
+    //     this.setState({
+    //         selectedPlace: props,
+    //         activeMarker: marker,
+    //         showingInfoWindow: true,
+    //     });
+    // };
+
+    // closeInfoWindow = () => {
+    //     this.setState({
+    //         selectedPlace: {},
+    //         activeMarker: null,
+    //         showingInfoWindow: false,
+    //     });
+    // };
 
     render() {
         /* const coords = {lat: -21.805149, lng: -49.0921657}; */
@@ -77,12 +93,15 @@ export class MapContainer extends React.Component {
                     onSettingsClick={this.props.displaySettings}
                 />
                 <div className="MapContainer">
-                    <StoreInfo />
                     <Map
                         google={this.props.google}
                         zoom={15}
                         initialCenter={center}
                         style={style}>
+                        <StoreInfo
+                            modalIsOpen={this.state.modalIsOpen}
+                            closeModal={this.closeModal}
+                        />
                         {/* <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
                             radius={800}
                             center={center}
@@ -96,7 +115,7 @@ export class MapContainer extends React.Component {
                         /> */}
 
                         <Marker
-                            onClick={this.onMarkerClick}
+                            onClick={this.openModal}
                             name={"Freshfindr User"}
                             // icon={placeholder}
                         />
@@ -107,6 +126,7 @@ export class MapContainer extends React.Component {
                             <div>
                                 <h1>{this.state.selectedPlace.name}</h1>
                             </div>
+
                         </InfoWindow>
                     </Map>
                 </div>
