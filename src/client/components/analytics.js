@@ -20,7 +20,7 @@ export default class Analytics extends React.Component {
                 {<AnalyticsSidebar />}
                 {<AnalyticsNav />}
                 <h3 className="yearOverview">{"Year overview : "}</h3>
-                <img src={graph}/>
+                <img src={graph} />
                 <NumberOfRating />
             </div>
         );
