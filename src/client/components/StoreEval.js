@@ -58,34 +58,48 @@ export default class StoreEval extends React.Component {
 
                     <hr className="hr" />
                     <div className="choice">
-<span><p className="Productchoice">Product</p>
-  <select>
-    <option value="0">{"Meat"}</option>
-    <option value="1">{"Eggs"}</option>
-    <option value="2">{"Vegetable"}</option>
-    <option value="3">{"Fish"}</option>
-    <option value="4">{"Fruits"}</option>
-    <option value="5">...</option>
+                        <span>
+                            <p className="Productchoice">Product</p>
+                            <select>
+                                <option value="0">{"Meat"}</option>
+                                <option value="1">{"Eggs"}</option>
+                                <option value="2">{"Vegetable"}</option>
+                                <option value="3">{"Fish"}</option>
+                                <option value="4">{"Fruits"}</option>
+                                <option value="5">...</option>
+                            </select>
+                        </span>
+                        <br />
+                        <span>
+                            {"Texture"} {star}
+                            {star}
+                            {star}
+                        </span>
+                        <br />
+                        <span>
+                            {"Taste"} {star}
+                            {star}
+                        </span>
+                        <br />
+                        <span>
+                            {"Freshness"} {star}
+                        </span>
+                        <br />
+                        <span>
+                            {"Smell"} {star}
+                            {star}
+                            {star}
+                            {star}
+                        </span>
+                        <br />
+                        <textarea placeholder="Type your comment.." />
+                    </div>
 
-  </select> 
-  </span> 
-  <br/>
-  <span>{"Texture"} {star}{star}{star}</span> 
-  <br/>
-  <span>{"Taste"} {star}{star}</span> 
-  <br/>  
-  <span>{"Freshness"} {star}</span> 
-  <br/>
-  <span>{"Smell"} {star}{star}{star}{star}</span> 
-  <br/>
-  <textarea placeholder="Type your comment.."></textarea>
-  </div>
-  
-  <button
-                            className="addReview_button"
-                            onClick={this.props.closeModal}>
-                            {"+"}
-                        </button>
+                    <button
+                        className="addReview_button"
+                        onClick={this.props.closeModal}>
+                        {"+"}
+                    </button>
                 </Modal>
             </>
         );
