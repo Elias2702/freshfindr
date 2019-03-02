@@ -15,7 +15,7 @@ const customStyles = {
         backgroundColor: "rgba(37, 26, 68, 0.84)",
         borderRadius: "20px",
         outline: "none",
-        paddingBottom: "2rem;",
+        paddingBottom: "2rem",
     },
 };
 
