@@ -67,8 +67,6 @@ export class MapContainer extends React.Component {
     };
 
     render() {
-        /* const coords = {lat: -21.805149, lng: -49.0921657}; */
-
         return (
             <>
                 {/* <span class="dot"></span> */}
@@ -85,7 +83,9 @@ export class MapContainer extends React.Component {
                         streetViewControl={false}
                         fullscreenControl={false}
                         mapTypeControl={false}
-                        zoomControl={false}>
+                        zoomControl={false}
+                        onReady={this.fetchPlaces}>
+                    
                         {/* <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
                             radius={800}
                             center={center}
@@ -103,6 +103,33 @@ export class MapContainer extends React.Component {
                             name={"Freshfindr User"}
                             icon={Icon}
                         />
+                        <Marker 
+                        title={'Carrefour Express'}
+                        name={'Carrefour Express'}
+                        position={{lat: 50.876928, lng: 4.700598 }}
+                        />
+
+                        <Marker 
+                        title={'Carrefour Express'}
+                        name={'Carrefour Express'}
+                        position={{lat: 50.876249, lng: 4.711735  }}
+                        />
+
+                        <Marker 
+                        title={'Carrefour Express'}
+                        name={'Carrefour Express'}
+                        position={{lat: 50.870968, lng: 4.704145 }}
+                        />
+
+                        <Marker 
+                        title={'Carrefour Express'}
+                        name={'Carrefour Express'}
+                        position={{lat: 50.871027, lng: 4.691831 }}
+                        />
+
+
+
+                        
                         <InfoWindow
                             marker={this.state.activeMarker}
                             visible={this.state.showingInfoWindow}
@@ -111,6 +138,13 @@ export class MapContainer extends React.Component {
                                 <h1>{this.state.selectedPlace.name}</h1>
                             </div>
                         </InfoWindow>
+
+                        <Marker
+                            onClick={this.onMarkerClick}
+                            name={"Freshfindr User"}
+                            icon={Icon}
+                        />
+
                     </Map>
                 </div>
             </>
