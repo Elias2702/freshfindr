@@ -148,7 +148,7 @@ export class MapContainer extends React.Component {
                         <Marker
                             title={"Carrefour Express"}
                             name={"Carrefour Express"}
-                            position={{lat: 50.871027, lng: 4.691831}}
+                            position={{lat: 50.871026, lng: 4.691831}}
                             onClick={this.openModal}
 
                         />
