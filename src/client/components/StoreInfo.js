@@ -67,9 +67,12 @@ export default class StoreInfo extends React.Component {
                             <p>{"Open"}</p>
                             <img src={pathIcon} />
                         </span>
-                        <form>
-                            <textarea className="review_input" />
-                        </form>
+                        <div className="review_input">
+                            <br />
+                            <br />
+                            <strong>{"User1 said:"}</strong>
+                            <p>{"The best tomatoes I ever ate !"}</p>
+                        </div>
                         <button
                             className="addReview_button"
                             onClick={this.props.changeModal}>
