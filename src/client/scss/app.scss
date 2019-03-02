@@ -110,16 +110,16 @@ html, body {
 }
 
 .searchBar .textarea {
-  border: none;
-  border-radius: 2rem;
-  padding-left: 1rem;
-  width: 70%;
-  height: 25%;
-  background-color: rgba(37, 26, 68, 0.84);
-  font-size: 2rem;
-  position: absolute;
-  margin-left: -20rem;
-  margin-top: 3rem;
+    border: none;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    width: 70%;
+    height: 25%;
+    background-color: rgba(37, 26, 68, 0.84);
+    font-size: 2rem;
+    position: absolute;
+    margin-left: -20rem;
+    margin-top: 3rem;
 }
 
 .searchButton {
@@ -147,14 +147,28 @@ html, body {
 
 .closeBtn {
     background: none;
-    border: none;
-<<<<<<< HEAD
-    align-self: end;
-=======
-    
+    border: none;    
+}
+
+.modalTopSpan {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.stars {
+    margin-right: 200px;
 }
 
 .hr {
-    border: 1px solid rgba(255, 248, 248, 0.46);
->>>>>>> youssef
+    border: 1px solid rgba(255, 248, 248, 0.48);
 }
