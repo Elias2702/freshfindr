@@ -1,6 +1,8 @@
 import React from "react";
 import Modal from "react-modal";
 import cross from "../ressources/icones/X.png";
+import starempty from "../ressources/icones/star.png";
+import fullstar from "../ressources/icones/fullstar.png";
 
 const customStyles = {
     content: {
@@ -55,6 +57,30 @@ export default class StoreEval extends React.Component {
                     </span>
 
                     <hr className="hr" />
+                    <div className="choice">
+<span><p className="Productchoice">Product</p>
+  <select>
+    <option value="0">{"Meat"}</option>
+    <option value="1">{"Eggs"}</option>
+    <option value="2">{"Vegetable"}</option>
+    <option value="3">{"Fish"}</option>
+    <option value="4">{"Fruits"}</option>
+    <option value="5">...</option>
+
+  </select> 
+  </span> 
+  <br/>
+  <span>Texture</span> 
+  <br/>
+  <span>Taste</span> 
+  <br/>  
+  <span>Freshness</span> 
+  <br/>
+  <span>Smell</span> 
+  <br/>
+  <textarea placeholder="Type your comment.."></textarea>
+  </div>
+  
                 </Modal>
             </>
         );

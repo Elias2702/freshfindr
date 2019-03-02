@@ -365,7 +365,6 @@ span {
     display: flex;
     margin-left: 1.5rem;
     p {
-        color: green;
         margin: .5rem;
     }
     h1 {
@@ -382,4 +381,35 @@ span {
     justify-content: center;
     cursor: pointer;
     
+}
+
+.Productchoice {
+    color: white;
+    p {
+        color: white;
+    }
+}
+
+.choice {
+    text-align: center;
+p {
+    color: white;
+
+}
+}
+
+textarea {
+    margin:0 auto;
+    border: none;
+    border-radius: 1rem;
+    width: 80%;
+    margin-left: 10%;
+    height: 6rem;
+    outline: none;
+}
+
+
+textarea::placeholder {
+    text-align: center;
+    padding-top: 2rem;
 }
