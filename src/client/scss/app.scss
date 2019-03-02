@@ -17,11 +17,6 @@ html, body {
     z-index: -1;
 }
 
-.MapContainer.blurred {
-    filter: blur(0.1px);
-    // opacity: 0.5;
-}
-
 .loginContainer{
     margin: 0 auto;
     width: 100vw;
@@ -92,7 +87,7 @@ html, body {
 .searchBar {
     z-index: 1;
     position: absolute;
-    margin-top: 110%;
+    margin-top: 90%;
     margin-left: 5%;
     width: 90%;
     vertical-align: middle;
@@ -115,16 +110,17 @@ html, body {
 }
 
 .searchBar .textarea {
+    color: white;   
     border: none;
     border-radius: 2rem;
     padding-left: 1rem;
-    width: 70%;
+    width: 50%;
     height: 25%;
     background-color: rgba(37, 26, 68, 0.84);
     font-size: 2rem;
     position: absolute;
-    margin-left: -20rem;
-    margin-top: 3rem;
+    margin-left: -38rem;
+    margin-top: -6rem;
 }
 
 .searchButton {
@@ -137,17 +133,21 @@ html, body {
 .searchButton.buttonIsClicked {
     padding: 3rem;
     background-color: rgba(223, 132, 25, 0.67);
+    display: none;
 }
 
 .searchBar .textarea {
     border: none;
     border-radius: 2rem;
-    margin-right: -1rem;
     padding-left: 1rem;
     width: 70%;
     height: 3rem;
     background-color: rgba(37, 26, 68, 0.84);
     font-size: 2rem;
+}
+
+.modal {
+    z-index: 3;
 }
 
 .closeBtn {
