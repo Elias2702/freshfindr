@@ -318,14 +318,18 @@ html, body {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 18px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 .stars {
-    margin-right: 200px;
+    display: flex;
+    justify-content:space-between;
+    width: 5rem;
+    align-items: center;
+    margin-right: 3rem;
 }
 
 .hr {
