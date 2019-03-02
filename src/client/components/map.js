@@ -54,18 +54,18 @@ export class MapContainer extends React.Component {
     };
 
     render() {
-        const coords = {lat: -21.805149, lng: -49.0921657};
-
         return (
             <>
-                {/* <span class="dot"></span> */}
-
                 <div className="MapContainer">
                     <Map
                         google={this.props.google}
                         zoom={15}
                         initialCenter={center}
-                        style={style}>
+                        style={style}
+                        streetViewControl={false}
+                        fullscreenControl={false}
+                        mapTypeControl={false}
+                        zoomControl={false}>
                         <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
                             radius={800}
                             center={center}
@@ -81,7 +81,6 @@ export class MapContainer extends React.Component {
                         <Marker
                             onClick={this.onMarkerClick}
                             name={"Freshfindr User"}
-                            // icon={placeholder}
                         />
                         <InfoWindow
                             marker={this.state.activeMarker}
