@@ -1,5 +1,6 @@
 import React from "react";
 import Modal from "react-modal";
+import cross from "../ressources/icones/X.png";
 
 const customStyles = {
     content: {
@@ -53,8 +54,9 @@ export default class StoreInfo extends React.Component {
                         </span>
                         <button
                             className="closeBtn"
-                            onClick={this.props.closeModal}
-                        />
+                            onClick={this.props.closeModal}>
+                            <img src={cross} />
+                        </button>
                     </span>
 
                     <hr className="hr" />

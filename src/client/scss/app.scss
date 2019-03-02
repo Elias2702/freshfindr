@@ -151,7 +151,7 @@ html, body {
 }
 
 .closeBtn {
-    background-image: url("../ressources/icones/Page\ 1@2x.png");
+    background: none;
     border: none;    
 }
 
@@ -164,18 +164,18 @@ html, body {
     font-style: normal;
     font-weight: 300;
     line-height: normal;
-    font-size: 22px;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-top: 10px;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    padding-top: 0.5rem;
 }
 
 .stars {
     display: flex;
     justify-content:space-between;
-    width: 70px;
+    width: 5rem;
     align-items: center;
-    margin-right: 180px;
+    margin-right: 3rem;
 }
 
 .hr {
