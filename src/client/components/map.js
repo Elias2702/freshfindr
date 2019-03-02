@@ -7,6 +7,7 @@ import {
     // Circle,
 } from "google-maps-react";
 import StoreInfo from "./StoreInfo";
+import StoreEval from "./StoreEval";
 import MapButtons from "./mapButtons";
 import Icon from "./assets/icon/placeholder-resize.png";
 import ShopIcon from "../ressources/icones/shopping-cart.png";
@@ -49,10 +50,13 @@ export class MapContainer extends React.Component {
             activeMarker: {},
             selectedPlace: {},
             modalIsOpen: false,
+            modalEvalIsOpen: false,
         };
         this.openModal = this.openModal.bind(this);
         // this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
+        this.changeModal = this.changeModal.bind(this);
+        this.closeModalEval = this.closeModalEval.bind(this);
     }
 
     openModal() {
@@ -65,6 +69,15 @@ export class MapContainer extends React.Component {
 
     closeModal() {
         this.setState({modalIsOpen: false});
+    }
+
+    closeModalEval() {
+        this.setState({modalEvalIsOpen: false});
+    }
+
+    changeModal() {
+        this.setState({modalIsOpen: false});
+        this.setState({modalEvalIsOpen: true});
     }
 
     // onMarkerClick = (props, marker) => {
@@ -106,6 +119,11 @@ export class MapContainer extends React.Component {
                         <StoreInfo
                             modalIsOpen={this.state.modalIsOpen}
                             closeModal={this.closeModal}
+                            changeModal={this.changeModal}
+                        />
+                        <StoreEval
+                            modalIsOpen={this.state.modalEvalIsOpen}
+                            closeModal={this.closeEvalModal}
                         />
                         {/* <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
                             radius={800}

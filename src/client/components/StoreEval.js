@@ -33,7 +33,7 @@ const star = (
 
 Modal.setAppElement("#app");
 
-export default class StoreInfo extends React.Component {
+export default class StoreEval extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -47,11 +47,6 @@ export default class StoreInfo extends React.Component {
                     style={customStyles}>
                     <span className="modalTopSpan">
                         {"Colruyt"}
-                        <span className="stars">
-                            {star}
-                            {star}
-                            {star}
-                        </span>
                         <button
                             className="closeBtn"
                             onClick={this.props.closeModal}>
@@ -60,7 +55,6 @@ export default class StoreInfo extends React.Component {
                     </span>
 
                     <hr className="hr" />
-                    <button onClick={this.props.changeModal} />
                 </Modal>
             </>
         );
