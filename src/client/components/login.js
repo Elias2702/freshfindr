@@ -10,7 +10,7 @@ export default class Login extends React.Component {
         };
 
         this.handleChange = this.handleChange.bind(this);
-        /* this.handleSubmit = this.handleSubmit.bind(this); */
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(data) {
@@ -21,14 +21,16 @@ export default class Login extends React.Component {
         });
     }
 
-    /* handleSubmit(data) {} */
+    handleSubmit() {
+        this.props.history.push("/home");
+    }
 
     render() {
         return (
             <div className="loginContainer">
                 <LoginForm
                     handleChange={this.handleChange}
-                    /* handleSubmit={this.handleSubmit} */
+                    handleSubmit={this.handleSubmit}
                 />
             </div>
         );
