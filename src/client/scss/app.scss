@@ -16,10 +16,19 @@ html, body {
     z-index: -1;
 }
 
+.ReactModalPortal{
+    z-index: 1;
+    width: 500px;
+    height: 500px;
+    background: #000;
+    position: absolute;
+    opacity: 0.5;
+}
 
 input[type=search] {
 
 }
+
 .loginContainer{
     margin: 0 auto;
     width: 100vw;
