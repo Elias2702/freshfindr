@@ -17,11 +17,11 @@ html, body {
     z-index: -1;
 }
 
-<<<<<<< HEAD
 .MapContainer.blurred {
     filter: blur(0.1px);
     // opacity: 0.5;
-=======
+}
+
 .ReactModalPortal{
     top: 50%;
     left: 50%;
@@ -32,7 +32,6 @@ html, body {
     // position: absolute;
     // opacity: 0.5;
     border-radius: 1rem;
->>>>>>> 296cea86eb97bc29d27d5d0b1cf65151156d69fe
 }
 
 .loginContainer{
