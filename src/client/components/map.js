@@ -73,7 +73,7 @@ export class MapContainer extends React.Component {
                 {/* <span class="dot"></span> */}
                 <MapButtons
                     onListClick={this.props.displayTheList}
-                    onSettingsClick={this.props.displaySettings}
+                    onAnalyticsClick={this.props.displayAnalytics}
                 />
                 <div className="MapContainer">
                     <Map
