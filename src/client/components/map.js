@@ -4,9 +4,12 @@ import {
     InfoWindow,
     Marker,
     GoogleApiWrapper,
-    Circle,
+    // Circle,
 } from "google-maps-react";
+import StoreInfo from "./StoreInfo";
 import MapButtons from "./mapButtons";
+import Icon from "./assets/icon/placeholder-resize.png";
+import ShopIcon from "../ressources/icones/shopping-cart.png";
 
 const style = {
     // style of the map
@@ -45,37 +48,52 @@ export class MapContainer extends React.Component {
             showingInfoWindow: false,
             activeMarker: {},
             selectedPlace: {},
+            modalIsOpen: false,
         };
+        this.openModal = this.openModal.bind(this);
+        // this.afterOpenModal = this.afterOpenModal.bind(this);
+        this.closeModal = this.closeModal.bind(this);
     }
 
-    onMarkerClick = (props, marker) => {
-        // to show box information when click on position
-        this.setState({
-            selectedPlace: props,
-            activeMarker: marker,
-            showingInfoWindow: true,
-        });
-    };
+    openModal() {
+        this.setState({modalIsOpen: true});
+    }
 
-    closeInfoWindow = () => {
-        this.setState({
-            selectedPlace: {},
-            activeMarker: null,
-            showingInfoWindow: false,
-        });
-    };
+    // afterOpenModal() {
+    //     this.subtitle.style.color = "#f00";
+    // }
+
+    closeModal() {
+        this.setState({modalIsOpen: false});
+    }
+
+    // onMarkerClick = (props, marker) => {
+    //     // to show box information when click on position
+    //     this.setState({
+    //         selectedPlace: props,
+    //         activeMarker: marker,
+    //         showingInfoWindow: true,
+    //     });
+    // };
+
+    // closeInfoWindow = () => {
+    //     this.setState({
+    //         selectedPlace: {},
+    //         activeMarker: null,
+    //         showingInfoWindow: false,
+    //     });
+    // };
 
     render() {
-        /* const coords = {lat: -21.805149, lng: -49.0921657}; */
-
         return (
             <>
                 {/* <span class="dot"></span> */}
                 <MapButtons
                     onListClick={this.props.displayTheList}
                     onSettingsClick={this.props.displaySettings}
+                    isBlurred={this.props.blurred}
                 />
-                <div className="MapContainer">
+                <div className={`MapContainer ${this.props.blurred}`}>
                     <Map
                         google={this.props.google}
                         zoom={15}
@@ -85,7 +103,11 @@ export class MapContainer extends React.Component {
                         fullscreenControl={false}
                         mapTypeControl={false}
                         zoomControl={false}>
-                        <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
+                        <StoreInfo
+                            modalIsOpen={this.state.modalIsOpen}
+                            closeModal={this.closeModal}
+                        />
+                        {/* <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
                             radius={800}
                             center={center}
                             onMouseover={() => console.log("mouseover")}
@@ -95,12 +117,45 @@ export class MapContainer extends React.Component {
                             fillColor="#DF8419"
                             strokeWeight={1.5}
                             fillOpacity={0.3}
-                        />
+                        /> */}
 
                         <Marker
                             onClick={this.onMarkerClick}
                             name={"Freshfindr User"}
+                            icon={Icon}
                         />
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.876928, lng: 4.700598}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.876249, lng: 4.711735}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.870968, lng: 4.704145}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.871026, lng: 4.691831}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
                         <InfoWindow
                             marker={this.state.activeMarker}
                             visible={this.state.showingInfoWindow}
@@ -117,5 +172,6 @@ export class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
+    /* eslint new-cap: [2, {capIsNewExceptions: ["M"]}]*/
     apiKey: "AIzaSyDalvpxv-7crRgGa3MNhZiWIClcM1urB2o",
 })(MapContainer); // eslint-disable-line new-cap
