@@ -96,16 +96,16 @@ input[type=search] {
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12,1fr);
-    grid-template-rows: repeat(12,1fr);
+    grid-template-rows: repeat(25,1fr);
 }
 
 .analyticsHeaderContainer {
     width: 100vw;
-    height: 70px;
     background-color: rgba(237, 138, 25, 0.89);
     grid-column-start: 1;
     grid-column-end: 12; 
-    grid-row: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
     display: grid;
     grid-template-rows: 1fr auto 1fr;
     grid-template-columns: repeat(12,1fr);
@@ -131,8 +131,8 @@ input[type=search] {
     background-color: rgba(11, 4, 32, 0.84);
     grid-column-start: 1;
     grid-column-end: 3;
-    grid-row-start: 2;
-    grid-row-end: 13;
+    grid-row-start: 4;
+    grid-row-end: 26;
     display: flex;
     flex-direction: column;
 }
@@ -160,4 +160,83 @@ input[type=search] {
     line-height: normal;
     font-size: 40px;
     color: #BAB9B9;
+}
+
+.analyticsNavContainer {
+    grid-row-start: 4;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 13;
+    background-color: rgba(198, 198, 198, 0.3); 
+    display: flex;
+    flex-direction: row;
+}
+
+.analyticsNav {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.analyticsNavContainer h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 30px;
+    margin: 0;
+    margin-left: 25px;
+}
+
+.analysticsNavElement {
+    margin-left:100px;
+}
+
+.analysticsNavElement p {
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 18px;
+}
+
+.yearOverview {
+    grid-row-start: 6;
+    grid-column: 3;
+    grid-column-end: 5;
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    font-size: 24px;
+}
+
+.numberOfRatingContainer{
+    width: 241px;
+    height: 238px;
+    border: 20px solid rgba(109, 158, 235, 0.91);
+    box-sizing: border-box;
+    border-radius: 50%;
+    grid-row-start: 10;
+    grid-column: 11;
+}
+
+.ratingSince, .ratingDate {
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    font-size: 18px;
+    text-align: center;
+}
+
+.ratingCount {
+    font-family: Prompt;
+    font-style: normal;
+    font-weight: 200;
+    line-height: normal;
+    font-size: 36px;
+}
+
+.Analyticscontainer img {
+    grid-row-start: 10;
+    grid-column: 6;
 }

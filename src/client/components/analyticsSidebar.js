@@ -8,10 +8,10 @@ export default class AnalyticsSidebar extends React.Component {
                     <i className="fas fa-chart-line" />
                 </div>
                 <div className="sidebarElement">
-                    <i class="far fa-user"/>
+                    <i className="far fa-user" />
                 </div>
                 <div className="sidebarElement">
-                    <i class="fas fa-euro-sign"/>
+                    <i className="fas fa-euro-sign" />
                 </div>
                 <div className="sidebarElement">
                     <h3>Support</h3>
