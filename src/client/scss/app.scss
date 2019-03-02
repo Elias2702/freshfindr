@@ -335,3 +335,50 @@ html, body {
 .hr {
     border: 1px solid rgba(255, 248, 248, 0.48);
 }
+
+form {
+    text-align: center;
+    textarea {
+        text-align: center;
+        color: white;
+        margin-top: 1rem;
+        outline: none;
+    }
+}
+
+.addReview {
+    margin: 0 auto;
+    text-align: center;
+}
+.review_input {
+    border:none;
+    border-radius: 2rem;
+    resize: none;
+    height: 10rem;
+    width: 90%;
+    margin-left: 4%;
+    margin-right: 2%;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+span {
+    display: flex;
+    margin-left: 1.5rem;
+    p {
+        color: green;
+        margin: .5rem;
+    }
+    h1 {
+        color: white;
+        font-size: .8rem;
+    }
+}
+
+.addReview_button {
+    background-color: #ED8A19;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    cursor: pointer;
+    
+}

@@ -8,7 +8,7 @@ import {
 } from "google-maps-react";
 import StoreInfo from "./StoreInfo";
 import MapButtons from "./mapButtons";
-import Icon from "./assets/icon/placeholder-resize.png";
+import Icon from "../ressources/icones/placeholder.png";
 import ShopIcon from "../ressources/icones/shopping-cart.png";
 
 const style = {
