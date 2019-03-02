@@ -8,13 +8,10 @@ export default class LoginFrom extends React.Component {
     render() {
         return (
             <div className="loginFormContainer">
-                <form
-                    method="GET"
-                    onSubmit={this.props.handleSubmit}
-                    className="loginForm">
+                <form onClick={this.props.handleSubmit} className="loginForm">
                     <input
                         type="text"
-                        // onChange={this.props.handleChange}
+                        onChange={this.props.handleChange}
                         placeholder="Email"
                         name="email"
                     />
@@ -22,7 +19,7 @@ export default class LoginFrom extends React.Component {
                         type="password"
                         placeholder="Password"
                         name="password"
-                        // onChange={this.props.handleChange}
+                        onChange={this.props.handleChange}
                     />
                     <button
                         type="submit"
