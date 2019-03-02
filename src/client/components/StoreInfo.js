@@ -55,11 +55,8 @@ export default class StoreInfo extends React.Component {
                     isOpen={this.props.modalIsOpen}
                     className="modal"
                     style={customStyles}>
-                    <button
-                        className="closeBtn"
-                        onClick={this.props.closeModal}>
-                        {closeBtn}
-                    </button>
+                    <button onClick={this.props.closeModal}>{closeBtn}</button>
+                    <hr className="hr" />
                 </Modal>
             </>
         );
