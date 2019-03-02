@@ -83,8 +83,6 @@ export class MapContainer extends React.Component {
     // };
 
     render() {
-        /* const coords = {lat: -21.805149, lng: -49.0921657}; */
-
         return (
             <>
                 {/* <span class="dot"></span> */}
@@ -136,5 +134,6 @@ export class MapContainer extends React.Component {
 }
 
 export default GoogleApiWrapper({
+    /* eslint new-cap: [2, {capIsNewExceptions: ["M"]}]*/
     apiKey: "AIzaSyDalvpxv-7crRgGa3MNhZiWIClcM1urB2o",
 })(MapContainer); // eslint-disable-line new-cap
