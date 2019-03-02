@@ -1,5 +1,11 @@
 import * as React from "react";
-import {Map, InfoWindow, Marker, GoogleApiWrapper} from "google-maps-react";
+import {
+    Map,
+    InfoWindow,
+    Marker,
+    GoogleApiWrapper,
+    Circle,
+} from "google-maps-react";
 
 const style = {
     // style of the map
@@ -48,24 +54,34 @@ export class MapContainer extends React.Component {
     };
 
     render() {
+        const coords = {lat: -21.805149, lng: -49.0921657};
+
         return (
             <>
-                <label htmlFor="site-search" />
-                <input
-                    type="search"
-                    className="fresh_search"
-                    name="q"
-                    aria-label="Search your product"
-                />
+                {/* <span class="dot"></span> */}
+
                 <div className="MapContainer">
                     <Map
                         google={this.props.google}
                         zoom={15}
                         initialCenter={center}
                         style={style}>
+                        <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
+                            radius={800}
+                            center={center}
+                            onMouseover={() => console.log("mouseover")}
+                            onClick={() => console.log("click")}
+                            onMouseout={() => console.log("mouseout")}
+                            strokeColor="#DF8419"
+                            fillColor="#DF8419"
+                            strokeWeight={1.5}
+                            fillOpacity={0.3}
+                        />
+
                         <Marker
                             onClick={this.onMarkerClick}
                             name={"Freshfindr User"}
+                            // icon={placeholder}
                         />
                         <InfoWindow
                             marker={this.state.activeMarker}
