@@ -5,6 +5,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    position: relative;
 }
 
 #app{
@@ -21,10 +22,23 @@ html, body {
     z-index: -1;
 }
 
-
-input[type=search] {
-
+.MapContainer.blurred {
+    filter: blur(0.1px);
+    // opacity: 0.5;
 }
+
+.ReactModalPortal{
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    width: 300px;
+    height: 350px;
+    // background-color: rgba(36, 24, 68, 50);
+    // position: absolute;
+    // opacity: 0.5;
+    border-radius: 1rem;
+}
+
 .loginContainer{
     margin: 0 auto;
     width: 100vw;
@@ -239,4 +253,64 @@ input[type=search] {
 .Analyticscontainer img {
     grid-row-start: 10;
     grid-column: 6;
+}
+.searchBar {
+    z-index: 1;
+    position: absolute;
+    margin-top: 110%;
+    margin-left: 5%;
+    width: 90%;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.searchButton {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  border: none;
+  background-color:rgba(223, 132, 25, 0.67);
+}
+
+.searchButton.buttonIsClicked {
+  width: 8rem;
+  height: 8rem;
+  background-color: rgba(223, 132, 25, 0.67);
+}
+
+.searchBar .textarea {
+  border: none;
+  border-radius: 2rem;
+  padding-left: 1rem;
+  width: 70%;
+  height: 25%;
+  background-color: rgba(37, 26, 68, 0.84);
+  font-size: 2rem;
+  position: absolute;
+  margin-left: -20rem;
+  margin-top: 3rem;
+}
+
+.searchButton {
+    padding: 2rem;
+    border-radius: 50%;
+    border: none;
+    background-color:rgba(223, 132, 25, 0.67);
+}
+
+.searchButton.buttonIsClicked {
+    padding: 3rem;
+    background-color: rgba(223, 132, 25, 0.67);
+}
+
+.searchBar .textarea {
+    border: none;
+    border-radius: 2rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    width: 70%;
+    height: 3rem;
+    background-color: rgba(37, 26, 68, 0.84);
+    font-size: 2rem;
 }

@@ -1,6 +1,7 @@
 import * as React from "react";
 import MapContainer from "./map";
 import Analytics from "./analytics";
+import SearchBar from "./searchbar";
 
 export default class Freshfindr extends React.Component {
     constructor(props) {
@@ -10,12 +11,14 @@ export default class Freshfindr extends React.Component {
                 <MapContainer
                     displayTheList={this.displayTheList}
                     displayAnalytics={this.displayAnalytics}
+                    displaySearchbar={this.displaySearchbar}
                 />
             ),
         };
         this.displayTheList = this.displayTheList.bind(this);
         this.displayAnalytics = this.displayAnalytics.bind(this);
         this.displayMap = this.displayMap.bind(this);
+        this.displaySearchbar = this.displaySearchbar.bind(this);
     }
 
     displayTheList = () => {
@@ -30,18 +33,31 @@ export default class Freshfindr extends React.Component {
         });
     };
 
-    displayMap = () => {
+    displaySearchbar = () => {
         this.setState({
-            displayContent: (
+            displaySearchbar: true
+        })
+    }
+
+
+    render() {
+
+        let isBlurred = "";
+        if(this.state.displaySearchbar) {
+            isBlurred = "blurred"
+        } else {
+            isBlurred = ""
+        }
+
+        return (
+            <div className="container">
                 <MapContainer
                     displayTheList={this.displayTheList}
                     displayAnalytics={this.displayAnalytics}
+                    blurred={isBlurred}
                 />
-            ),
-        });
-    };
-
-    render() {
-        return <div className="container">{this.state.displayContent}</div>;
+                <SearchBar displaySearchbar={this.displaySearchbar} />
+            </div>
+        );
     }
 }
