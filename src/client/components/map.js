@@ -4,8 +4,9 @@ import {
     InfoWindow,
     Marker,
     GoogleApiWrapper,
-    Circle,
+    // Circle,
 } from "google-maps-react";
+import StoreInfo from "./StoreInfo";
 
 const style = {
     // style of the map
@@ -54,19 +55,17 @@ export class MapContainer extends React.Component {
     };
 
     render() {
-        const coords = {lat: -21.805149, lng: -49.0921657};
-
         return (
             <>
                 {/* <span class="dot"></span> */}
-
                 <div className="MapContainer">
+                    <StoreInfo />
                     <Map
                         google={this.props.google}
                         zoom={15}
                         initialCenter={center}
                         style={style}>
-                        <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
+                        {/* <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
                             radius={800}
                             center={center}
                             onMouseover={() => console.log("mouseover")}
@@ -76,7 +75,7 @@ export class MapContainer extends React.Component {
                             fillColor="#DF8419"
                             strokeWeight={1.5}
                             fillOpacity={0.3}
-                        />
+                        /> */}
 
                         <Marker
                             onClick={this.onMarkerClick}
