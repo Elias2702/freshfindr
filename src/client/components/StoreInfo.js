@@ -8,11 +8,10 @@ const customStyles = {
         right: "25%",
         bottom: "auto",
         width: "30%",
-        height: "30%",
+        height: "40%",
         position: "relative",
-        backgroundColor: "black",
-        opacity: "0.5",
-        borderRadius: "1rem",
+        backgroundColor: "rgba(37, 26, 68, 0.84)",
+        borderRadius: "20px",
     },
 };
 
@@ -30,7 +29,8 @@ const closeBtn = (
         <svg
             width="11"
             height="11"
-            viewBox="0 0 11 11"
+            // viewBox="0 0 11 11"
+            transform="translate(-25, 0)"
             fill="none"
             xmlns="http://www.w3.org/2000/svg">
             <path
@@ -54,9 +54,12 @@ export default class StoreInfo extends React.Component {
                 <Modal
                     isOpen={this.props.modalIsOpen}
                     className="modal"
-                    // overlayClassName="Overlay"
                     style={customStyles}>
-                    <button onClick={this.props.closeModal}>{closeBtn}</button>
+                    <button
+                        className="closeBtn"
+                        onClick={this.props.closeModal}>
+                        {closeBtn}
+                    </button>
                 </Modal>
             </>
         );
