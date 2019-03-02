@@ -7,7 +7,7 @@ export default class Freshfindr extends React.Component {
         super(props);
         this.state = {
             displayList: false,
-            displaySearchbar: false
+            displaySearchbar: false,
         };
         this.displayTheList = this.displayTheList.bind(this);
         this.displaySettings = this.displaySettings.bind(this);
@@ -29,18 +29,17 @@ export default class Freshfindr extends React.Component {
 
     displaySearchbar = () => {
         this.setState({
-            displaySearchbar: true
-        })
-    }
-
+            displaySearchbar: true,
+        });
+    };
 
     render() {
-
         let isBlurred = "";
-        if(this.state.displaySearchbar) {
-            isBlurred = "blurred"
+
+        if (this.state.displaySearchbar) {
+            isBlurred = "blurred";
         } else {
-            isBlurred = ""
+            isBlurred = "";
         }
 
         return (
