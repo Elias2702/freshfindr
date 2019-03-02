@@ -114,7 +114,7 @@ export class MapContainer extends React.Component {
 
                         <Marker
                             onClick={this.openModal}
-                            name={"Freshfindr User"}
+                            // name={"Freshfindr User"}
                             // icon={placeholder}
                         />
                         <InfoWindow
