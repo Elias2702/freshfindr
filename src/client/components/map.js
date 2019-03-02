@@ -53,7 +53,6 @@ export class MapContainer extends React.Component {
             modalEvalIsOpen: false,
         };
         this.openModal = this.openModal.bind(this);
-        // this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.changeModal = this.changeModal.bind(this);
         this.closeEvalModal = this.closeEvalModal.bind(this);
@@ -62,10 +61,6 @@ export class MapContainer extends React.Component {
     openModal() {
         this.setState({modalIsOpen: true});
     }
-
-    // afterOpenModal() {
-    //     this.subtitle.style.color = "#f00";
-    // }
 
     closeModal() {
         this.setState({modalIsOpen: false});
@@ -79,23 +74,6 @@ export class MapContainer extends React.Component {
         this.setState({modalIsOpen: false});
         this.setState({modalEvalIsOpen: true});
     }
-
-    // onMarkerClick = (props, marker) => {
-    //     // to show box information when click on position
-    //     this.setState({
-    //         selectedPlace: props,
-    //         activeMarker: marker,
-    //         showingInfoWindow: true,
-    //     });
-    // };
-
-    // closeInfoWindow = () => {
-    //     this.setState({
-    //         selectedPlace: {},
-    //         activeMarker: null,
-    //         showingInfoWindow: false,
-    //     });
-    // };
 
     render() {
         return (
