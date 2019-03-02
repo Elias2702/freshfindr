@@ -166,8 +166,6 @@ export class MapContainer extends React.Component {
                                 <h1>{this.state.selectedPlace.name}</h1>
                             </div>
                         </InfoWindow>
-
-            
                     </Map>
                 </div>
             </>
