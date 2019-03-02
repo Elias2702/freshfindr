@@ -8,6 +8,8 @@ import {
 } from "google-maps-react";
 import StoreInfo from "./StoreInfo";
 import MapButtons from "./mapButtons";
+import Icon from "./assets/icon/placeholder-resize.png";
+import ShopIcon from "../ressources/icones/shopping-cart.png";
 
 const style = {
     // style of the map
@@ -119,10 +121,42 @@ export class MapContainer extends React.Component {
                         /> */}
 
                         <Marker
-                            onClick={this.openModal}
-                            // name={"Freshfindr User"}
-                            // icon={placeholder}
+                            onClick={this.onMarkerClick}
+                            name={"Freshfindr User"}
+                            icon={Icon}
                         />
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.876928, lng: 4.700598}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.876249, lng: 4.711735}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.870968, lng: 4.704145}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
+                        <Marker
+                            title={"Carrefour Express"}
+                            name={"Carrefour Express"}
+                            position={{lat: 50.871026, lng: 4.691831}}
+                            onClick={this.openModal}
+                            icon={ShopIcon}
+                        />
+
                         <InfoWindow
                             marker={this.state.activeMarker}
                             visible={this.state.showingInfoWindow}
