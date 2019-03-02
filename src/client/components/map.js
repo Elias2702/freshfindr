@@ -9,7 +9,7 @@ import {
 import StoreInfo from "./StoreInfo";
 import MapButtons from "./mapButtons";
 import Icon from "./assets/icon/placeholder-resize.png";
-import ShopIcon from './assets/icon/shop-near.png'
+import ShopIcon from '../ressources/icones/shopping-cart.png'
 
 const style = {
     // style of the map
