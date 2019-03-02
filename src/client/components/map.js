@@ -56,7 +56,7 @@ export class MapContainer extends React.Component {
         // this.afterOpenModal = this.afterOpenModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.changeModal = this.changeModal.bind(this);
-        this.closeModalEval = this.closeModalEval.bind(this);
+        this.closeEvalModal = this.closeEvalModal.bind(this);
     }
 
     openModal() {
@@ -71,7 +71,7 @@ export class MapContainer extends React.Component {
         this.setState({modalIsOpen: false});
     }
 
-    closeModalEval() {
+    closeEvalModal() {
         this.setState({modalEvalIsOpen: false});
     }
 
