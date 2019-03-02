@@ -9,7 +9,7 @@ import {
 import StoreInfo from "./StoreInfo";
 import StoreEval from "./StoreEval";
 import MapButtons from "./mapButtons";
-import Icon from "./assets/icon/placeholder-resize.png";
+import Icon from "../ressources/icones/placeholder.png";
 import ShopIcon from "../ressources/icones/shopping-cart.png";
 
 const style = {
@@ -103,6 +103,7 @@ export class MapContainer extends React.Component {
                 {/* <span class="dot"></span> */}
                 <MapButtons
                     onListClick={this.props.displayTheList}
+                    onAnalyticsClick={this.props.displayAnalytics}
                     onSettingsClick={this.props.displaySettings}
                     isBlurred={this.props.blurred}
                 />
