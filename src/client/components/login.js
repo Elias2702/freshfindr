@@ -11,7 +11,7 @@ export default class Login extends React.Component {
             redirect: true,
         };
 
-        // this.handleChange = this.handleChange.bind(this);
+        this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
@@ -24,15 +24,14 @@ export default class Login extends React.Component {
     // }
 
     handleSubmit() {
-        // return <Redirect to="/home" />;
-        window.location = "/home";
+        this.props.history.push("/home");
     }
 
     render() {
         return (
             <div className="loginContainer">
                 <LoginForm
-                    // handleChange={this.handleChange}
+                    handleChange={this.handleChange}
                     handleSubmit={this.handleSubmit}
                 />
             </div>

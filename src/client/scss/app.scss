@@ -5,7 +5,10 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     position: relative;
+=======
+>>>>>>> beca8f6c170a325957440a2d60fc7cb6afb09888
 }
 
 .container {
@@ -13,13 +16,27 @@ html, body {
     margin: 0 auto;
 }
 
+<<<<<<< HEAD
+=======
+.MapContainer {
+    z-index: -1;
+}
+
+
+>>>>>>> beca8f6c170a325957440a2d60fc7cb6afb09888
 input[type=search] {
     padding-bottom: 20px;
     border: none;
     border-radius: .5rem;
     background-color: rgba(223, 131, 25, 0.5);
     margin-bottom: .2rem;
+<<<<<<< HEAD
 
+=======
+    text-align: center;
+    position: absolute;
+    z-index: 1;
+>>>>>>> beca8f6c170a325957440a2d60fc7cb6afb09888
 }
 .loginContainer{
     margin: 0 auto;
@@ -58,7 +75,10 @@ input[type=search] {
 .loginButton{
     background: rgba(223, 132, 25, 0.79);
     border-radius: 40px;
+<<<<<<< HEAD
     width: 350px;
     height: 30px;
     margin-top:15px;
+=======
+>>>>>>> beca8f6c170a325957440a2d60fc7cb6afb09888
 }
