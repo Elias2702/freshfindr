@@ -1,16 +1,25 @@
-/* becodeorg/trouvkach
- *
- * /src/client/app.js - Client entry point
- *
- * coded by leny@BeCode
- * started at 15/02/2019
- */
-
-import * as React from "react";
+import React from "react";
 import ReactDOM from "react-dom";
-
+import {Route, Switch, BrowserRouter as Router} from "react-router-dom";
+import "./scss/app.scss";
+import Freshfindr from "./components/freshfindr";
 import Login from "./components/login";
 
-import "./scss/app.scss";
+class App extends React.Component {
+    render() {
+        return (
+            <Switch>
+                <Route exact path="/" component={Login} />
+                <Route exact path="/home" component={Freshfindr} />
+                {/* <Route component={NotFound} /> */}
+            </Switch>
+        );
+    }
+}
 
-ReactDOM.render(<Login />, document.querySelector("#app"));
+ReactDOM.render(
+    <Router>
+        <App />
+    </Router>,
+    document.getElementById("app"),
+);
