@@ -43,14 +43,15 @@ export default class Freshfindr extends React.Component {
 
     displayMap = () => {
         this.setState({
-            displayContent: 
+            displayContent: (
                 <MapContainer
                     displayTheList={this.displayTheList}
                     displayAnalytics={this.displayAnalytics}
                     displaySearchbar={this.displaySearchbar}
-                />,
+                />
+            ),
         });
-    }
+    };
 
     render() {
         let isBlurred = "";
