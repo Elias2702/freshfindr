@@ -53,8 +53,16 @@ export class MapContainer extends React.Component {
         });
     };
 
+    closeInfoWindow = () => {
+        this.setState({
+            selectedPlace: {},
+            activeMarker: null,
+            showingInfoWindow: false,
+        });
+    };
+
     render() {
-        const coords = {lat: -21.805149, lng: -49.0921657};
+        /* const coords = {lat: -21.805149, lng: -49.0921657}; */
 
         return (
             <>
@@ -85,7 +93,8 @@ export class MapContainer extends React.Component {
                         />
                         <InfoWindow
                             marker={this.state.activeMarker}
-                            visible={this.state.showingInfoWindow}>
+                            visible={this.state.showingInfoWindow}
+                            onClose={this.closeInfoWindow}>
                             <div>
                                 <h1>{this.state.selectedPlace.name}</h1>
                             </div>
