@@ -1,7 +1,11 @@
 import * as React from "react";
-import {Map, InfoWindow, Marker, GoogleApiWrapper,
-Circle} from "google-maps-react";
-
+import {
+    Map,
+    InfoWindow,
+    Marker,
+    GoogleApiWrapper,
+    Circle,
+} from "google-maps-react";
 
 const style = {
     // style of the map
@@ -49,14 +53,12 @@ export class MapContainer extends React.Component {
         });
     };
 
-    
-
     render() {
-        const coords = { lat: -21.805149, lng: -49.0921657 };
+        const coords = {lat: -21.805149, lng: -49.0921657};
 
         return (
             <>
-        {/* <span class="dot"></span> */}
+                {/* <span class="dot"></span> */}
 
                 <div className="MapContainer">
                     <Map
@@ -64,18 +66,18 @@ export class MapContainer extends React.Component {
                         zoom={15}
                         initialCenter={center}
                         style={style}>
-                    <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
-                        radius={800}
-                        center={center}
-                        onMouseover={() => console.log('mouseover')}
-                        onClick={() => console.log('click')}
-                        onMouseout={() => console.log('mouseout')}
-                        strokeColor='#DF8419'
-                        fillColor='#DF8419'
-                        strokeWeight={1.5}
-                        fillOpacity={0.3}
-                    />
- 
+                        <Circle // delete node_modules/google-maps-react and git clone in node modules : https://github.com/fullstackreact/google-maps-react.git
+                            radius={800}
+                            center={center}
+                            onMouseover={() => console.log("mouseover")}
+                            onClick={() => console.log("click")}
+                            onMouseout={() => console.log("mouseout")}
+                            strokeColor="#DF8419"
+                            fillColor="#DF8419"
+                            strokeWeight={1.5}
+                            fillOpacity={0.3}
+                        />
+
                         <Marker
                             onClick={this.onMarkerClick}
                             name={"Freshfindr User"}
@@ -90,7 +92,6 @@ export class MapContainer extends React.Component {
                         </InfoWindow>
                     </Map>
                 </div>
-
             </>
         );
     }
@@ -99,6 +100,3 @@ export class MapContainer extends React.Component {
 export default GoogleApiWrapper({
     apiKey: "AIzaSyDalvpxv-7crRgGa3MNhZiWIClcM1urB2o",
 })(MapContainer); // eslint-disable-line new-cap
-
-
-
