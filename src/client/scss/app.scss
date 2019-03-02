@@ -27,18 +27,6 @@ html, body {
     // opacity: 0.5;
 }
 
-.ReactModalPortal{
-    top: 50%;
-    left: 50%;
-    z-index: 1;
-    width: 300px;
-    height: 350px;
-    // background-color: rgba(36, 24, 68, 50);
-    // position: absolute;
-    // opacity: 0.5;
-    border-radius: 1rem;
-}
-
 .loginContainer{
     margin: 0 auto;
     width: 100vw;
@@ -252,6 +240,7 @@ html, body {
 
 .Analyticscontainer img {
     grid-row-start: 10;
+    grid-row-end: 26;
     grid-column: 6;
 }
 .searchBar {
@@ -280,16 +269,16 @@ html, body {
 }
 
 .searchBar .textarea {
-  border: none;
-  border-radius: 2rem;
-  padding-left: 1rem;
-  width: 70%;
-  height: 25%;
-  background-color: rgba(37, 26, 68, 0.84);
-  font-size: 2rem;
-  position: absolute;
-  margin-left: -20rem;
-  margin-top: 3rem;
+    border: none;
+    border-radius: 2rem;
+    padding-left: 1rem;
+    width: 70%;
+    height: 25%;
+    background-color: rgba(37, 26, 68, 0.84);
+    font-size: 2rem;
+    position: absolute;
+    margin-left: -20rem;
+    margin-top: 3rem;
 }
 
 .searchButton {
@@ -313,4 +302,32 @@ html, body {
     height: 3rem;
     background-color: rgba(37, 26, 68, 0.84);
     font-size: 2rem;
+}
+
+.closeBtn {
+    background: none;
+    border: none;    
+}
+
+.modalTopSpan {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: white;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-top: 10px;
+}
+
+.stars {
+    margin-right: 200px;
+}
+
+.hr {
+    border: 1px solid rgba(255, 248, 248, 0.48);
 }

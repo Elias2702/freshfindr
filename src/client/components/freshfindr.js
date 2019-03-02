@@ -14,6 +14,8 @@ export default class Freshfindr extends React.Component {
                     displaySearchbar={this.displaySearchbar}
                 />
             ),
+            displayList: false,
+            displaySearchbar: false,
         };
         this.displayTheList = this.displayTheList.bind(this);
         this.displayAnalytics = this.displayAnalytics.bind(this);
@@ -35,27 +37,33 @@ export default class Freshfindr extends React.Component {
 
     displaySearchbar = () => {
         this.setState({
-            displaySearchbar: true
-        })
+            displaySearchbar: true,
+        });
+    };
+
+    displayMap = () => {
+        this.setState({
+            displayContent: 
+                <MapContainer
+                    displayTheList={this.displayTheList}
+                    displayAnalytics={this.displayAnalytics}
+                    displaySearchbar={this.displaySearchbar}
+                />,
+        });
     }
 
-
     render() {
-
         let isBlurred = "";
-        if(this.state.displaySearchbar) {
-            isBlurred = "blurred"
+
+        if (this.state.displaySearchbar) {
+            isBlurred = "blurred";
         } else {
-            isBlurred = ""
+            isBlurred = "";
         }
 
         return (
             <div className="container">
-                <MapContainer
-                    displayTheList={this.displayTheList}
-                    displayAnalytics={this.displayAnalytics}
-                    blurred={isBlurred}
-                />
+                {this.state.displayContent}
                 <SearchBar displaySearchbar={this.displaySearchbar} />
             </div>
         );
